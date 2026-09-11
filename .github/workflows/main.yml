@@ -27,12 +27,12 @@ jobs:
       - name: Build image
         run: |
           docker build \
-            -t ghcr.io/${{ github.repository }}/webb:latest \
-            -t ghcr.io/${{ github.repository }}/webb:${{ github.sha }} \
+            -t ghcr.io/levshp/webb:latest \
+            -t ghcr.io/levshp/webb:${{ github.sha }} \
             .
 
       - name: Push image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          docker push ghcr.io/${{ github.repository }}/webb:latest
-          docker push ghcr.io/${{ github.repository }}/webb:${{ github.sha }}
+          docker push ghcr.io/levshp/webb:latest
+          docker push ghcr.io/levshp/webb:${{ github.sha }}
