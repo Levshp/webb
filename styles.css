@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Minecraftia";
+  src: url("./Minecraftia-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F885%2F885542.png&f=1&nofb=1&ipt=3eb79832279c2c84ab6f6cab681de139c3cbedf120209a56b7f8f7cb80155fd4");
+  background-attachment: fixed;
+  color: #1488;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+
+.top {
+  height: 40px;
+  border-bottom: 3px solid #ffccff;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdna.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F056%2F671%2F660%2Foriginal%2Fnooarth-witchanimegirl.gif%3F1669822398&f=1&nofb=1&ipt=c9b795ba7a5dec4fd12a57184cfb855305fc87512e731244f456ebf49139d487);
+  background-size: 10%;
+  background-position: center;
+  background-repeat: repeat-x;
+
+  font-size:24px;
+  font-family: cursive;
+  color: #ffccdd;
+  text-shadow:
+	-1px -1px 0 red,
+	1px -1px 0 green,
+	-1px  1px 0 blue,
+	1px  1px 0 purple;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.article {
+	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F6104199.png&f=1&nofb=1&ipt=a61ffe6200b6e71a071e616990b91aa6fab18e322da796213576b9e2ef790b81);
+	background-size:;
+	background-position: center;
+	background-repeat: repeat;
+
+	width: 60%;
+	margin: 0 auto;
+}
+
+.article h1 {
+  color: #ffff00;
+  transform: translate(-46px, -116px) rotate(-12deg);
+  font-family: "Minecraftia", monospace;
+  image-rendering: pixelated;
+}
+
+.article p {
+  color: #ffffff;
+  margin:10px;
+  transform: translate(0px, -36px);
+  font-family: "Minecraftia", monospace;
+  image-rendering: pixelated;
+  letter-spacing: 0.5px;
+}
+
+.solar-system {
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+
+.planet {
+  position: absolute;
+  width: 120px;
+  height: auto;
+}
+
+.sun { width: 1200px; top: 10px; left: -600px; }
+.earth { width: 90px; top: 600px; left: 880px; }
+.venus { width: 150px; top: 600px; left: 1200px; }
+
+.anime-girl { width: 750px; top: 100px; left: 1350px;}
+.radiance {width:1920px; top: -1750px;}
