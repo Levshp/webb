@@ -65,19 +65,19 @@ body {
 
 .solar-system {
   position: relative;
-  width: 500px;
-  height: 300px;
+  width: 1920px;
+  height: 1920px;
 }
 
 .planet {
   position: absolute;
-  width: 120px;
+  width: 6.25%;
   height: auto;
 }
 
-.sun { width: 1200px; top: 10px; left: -600px; }
-.earth { width: 90px; top: 600px; left: 880px; }
-.venus { width: 150px; top: 600px; left: 1200px; }
+.sun { width: 62.5%; top: 0.52%; left: -31.25%; }
+.earth { width: 4.6875%; top: 31.25%; left: 45.83%; }
+.venus { width: 7.8125%; top: 31.25%; left: 62.5%; }
 
-.anime-girl { width: 750px; top: 100px; left: 1350px;}
-.radiance {width:1920px; top: -1750px;}
+.anime-girl { width: 39.0625%; top: 5.2%; left: 70.31%;}
+.radiance {width:100%; top: -91.14%;}
