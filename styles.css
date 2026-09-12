@@ -7,11 +7,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F885%2F885542.png&f=1&nofb=1&ipt=3eb79832279c2c84ab6f6cab681de139c3cbedf120209a56b7f8f7cb80155fd4");
-  background-attachment: fixed;
-  color: #1488;
   min-height: 100vh;
   overflow-x: hidden;
+  color: #1488;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F885%2F885542.png&f=1&nofb=1&ipt=3eb79832279c2c84ab6f6cab681de139c3cbedf120209a56b7f8f7cb80155fd4");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 
