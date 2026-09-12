@@ -85,7 +85,7 @@ body::before {
   position: absolute;
   width: 6.25%;
   height: auto;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .sun { width: 62.5%; top: 0.52%; left: -31.25%; }
