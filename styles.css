@@ -27,7 +27,8 @@ body::before {
 
 
 .top {
-  height: 40px;
+  width: 100%;
+  height: auto;
   border-bottom: 3px solid #ffccff;
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdna.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F056%2F671%2F660%2Foriginal%2Fnooarth-witchanimegirl.gif%3F1669822398&f=1&nofb=1&ipt=c9b795ba7a5dec4fd12a57184cfb855305fc87512e731244f456ebf49139d487);
   background-size: 10%;
@@ -84,6 +85,7 @@ body::before {
   position: absolute;
   width: 6.25%;
   height: auto;
+  overflow-x: clip;
 }
 
 .sun { width: 62.5%; top: 0.52%; left: -31.25%; }
