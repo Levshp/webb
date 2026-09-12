@@ -60,10 +60,19 @@ body::before {
 
 .article h1 {
   color: #ffff00;
-  transform: translate(-46px, -116px) rotate(-12deg);
+  transform: translate(-46px, -36px) rotate(-3deg);
   font-family: "Minecraftia", monospace;
   image-rendering: pixelated;
 }
+
+.article h2 {
+  color: #ffff00;
+  transform: translate(-46px, -36px) rotate(-3deg);
+  font-family: "Minecraftia", monospace;
+  image-rendering: pixelated;
+}
+
+
 
 .article p {
   color: #ffffff;
@@ -93,4 +102,9 @@ body::before {
 .venus { width: 7.8125%; top: 31.25%; left: 62.5%; }
 
 .anime-girl { width: 39.0625%; top: 5.2%; left: 70.31%;}
-.radiance {width:100%; top: -91.14%;}
+.radiance {
+	width:100%; top: -91.14%; 
+	pointer-events: none;
+  	user-select: none;
+  	-webkit-user-drag: none;
+}
