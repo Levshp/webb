@@ -129,3 +129,28 @@ body::before {
   	user-select: none;
   	-webkit-user-drag: none;
 }
+
+.guestbook {
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+
+.guestbook iframe, .guestbook img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.guestbook img {
+  pointer-events: none;
+}
+
+.guestbook iframe {
+  width: 50%;
+  height: 50%;
+  left: 22.5%;
+  top: 5%;
+}
