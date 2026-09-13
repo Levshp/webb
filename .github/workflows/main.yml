@@ -53,8 +53,8 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           port: 2222
           password: ${{ secrets.SFTP_PASS }}
-          local_path: 'dist/'
-          remote_path: '/'
+          local_path: 'dist/*'
+          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
           sftp_only: true
           delete_remote_files: false
           sftpArgs: '-o HostKeyAlgorithms=+ssh-rsa'
