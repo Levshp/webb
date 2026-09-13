@@ -56,7 +56,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           mkdir -p dist
-          rsync -av --exclude='.git' --exclude='.github' --exclude='Dockerfile' --exclude='docker-compose*' --exclude='README.md' --exclude='LICENSE' --exclude='dist' ./ dist/
+          rsync -av --exclude='.git' --exclude='.github' --exclude='backend/' --exclude='Dockerfile' --exclude='docker-compose*' --exclude='README.md' --exclude='LICENSE' --exclude='dist' ./ dist/
 
       - name: Deploy website via SFTP
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && env.SFTP_PASS != ''
