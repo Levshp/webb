@@ -132,8 +132,10 @@ body::before {
 
 .guestbook {
   position: relative;
-  width: 800px;
-  height: 600px;
+  aspect-ratio: 4 / 3;
+  width: auto;
+  height: 1200px;
+  margin: 0 auto;
 }
 
 .guestbook iframe, .guestbook img {
