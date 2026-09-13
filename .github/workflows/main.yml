@@ -37,6 +37,21 @@ jobs:
           docker push ghcr.io/levshp/webb:latest
           docker push ghcr.io/levshp/webb:${{ github.sha }}
 
+      
+      - name: Build Backend image
+        run: |
+          docker build \
+            -t ghcr.io/levshp/webb-backend:latest \
+            -t ghcr.io/levshp/webb-backend:${{ github.sha }} \
+            .
+
+      - name: Push Backend image
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          docker push ghcr.io/levshp/webb-backend:latest
+          docker push ghcr.io/levshp/webb-backend:${{ github.sha }}
+
+
       - name: Prepare static files for deploy
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
