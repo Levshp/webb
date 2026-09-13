@@ -43,9 +43,6 @@ body::before {
 	1px -1px 0 green,
 	-1px  1px 0 blue,
 	1px  1px 0 purple;
-  display: flex;
-  align-items: center;
-  justify-content: left;
 }
 
 .article {
