@@ -6,6 +6,7 @@ import (
 	"errors"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 
@@ -13,7 +14,8 @@ import (
 )
 
 type App struct {
-	DB *sql.DB
+	DB          *sql.DB
+	DeleteToken string
 }
 
 type GuestbookEntry struct {
@@ -45,7 +47,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	app := &App{DB: db}
+	token := os.Getenv("DELETE_TOKEN")
+	if token == "" {
+		log.Fatal("DELETE_TOKEN is required")
+	}
+
+	app := &App{
+		DB:          db,
+		DeleteToken: token,
+	}
 
 	if err := app.migrate(); err != nil {
 		log.Fatal(err)
@@ -83,7 +93,7 @@ func (a *App) migrate() error {
 }
 
 func (a *App) health(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("ok"))
+	w.Write([]byte("Alive"))
 }
 
 func (a *App) listEntries(w http.ResponseWriter, r *http.Request) {
@@ -177,6 +187,15 @@ func (a *App) getEntry(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) deleteEntry(w http.ResponseWriter, r *http.Request) {
+	token := r.Header.Get("X-Delete-Token")
+	if token == "" {
+		token = r.URL.Query().Get("token")
+	}
+	if token != a.DeleteToken {
+		http.Error(w, "unauthorized", http.StatusUnauthorized)
+		return
+	}
+
 	id, err := parseID(r)
 	if err != nil {
 		http.Error(w, "invalid id", http.StatusBadRequest)

@@ -1,8 +1,11 @@
-module example.com/myapp
+module levshp/levshp
 
 go 1.22
 
-require modernc.org/sqlite v1.33.1
+require (
+	github.com/DATA-DOG/go-sqlmock v1.5.2
+	modernc.org/sqlite v1.33.1
+)
 
 require (
 	github.com/dustin/go-humanize v1.0.1 // indirect

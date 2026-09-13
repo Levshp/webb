@@ -7,6 +7,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
+RUN go test ./...
 RUN CGO_ENABLED=0 GOOS=linux go build -o /out/app main.go
 
 FROM gcr.io/distroless/static-debian12
