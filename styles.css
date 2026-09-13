@@ -50,12 +50,37 @@ body::before {
 
 .article {
 	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F6104199.png&f=1&nofb=1&ipt=a61ffe6200b6e71a071e616990b91aa6fab18e322da796213576b9e2ef790b81);
-	background-size:;
+	background-size: cover;
 	background-position: center;
 	background-repeat: repeat;
 
+  font-family: "Minecraftia", monospace;
+  image-rendering: pixelated;
+
+
 	width: 60%;
 	margin: 0 auto;
+}
+
+.article table {
+  width: 88%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  margin-bottom:10px;
+  background-image: url("./chis_stone_black.jpg");
+  background-size: 10%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.article td, th {
+  font-size: 300%;
+  color: #ffffff;
+  border: 4px solid #ffff00;
+  border-style: groove;
+  text-align: center;
+  vertical-align: center;
 }
 
 .article h1 {
@@ -71,7 +96,6 @@ body::before {
   font-family: "Minecraftia", monospace;
   image-rendering: pixelated;
 }
-
 
 
 .article p {
